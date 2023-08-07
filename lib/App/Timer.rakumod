@@ -7,7 +7,7 @@ has Int $!seconds    is default(0);
 has Int $!minutes    is default(0);
 
 method tick {
-    sleep 1 / 10000;  # hundredths, sped up x100
+    sleep 1 / 100;  # hundredths
 
     $!hundredths += 1;
     $!seconds    += $!hundredths div 100;
