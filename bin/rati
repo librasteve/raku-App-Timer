@@ -1,0 +1,15 @@
+#!/usr/bin/env raku
+use lib '../lib';
+
+use App::Timer;
+
+my $timer = Timer.new;
+
+$timer.start;
+
+for ^3 {
+    sleep 4;
+    $timer.reset;
+}   
+
+$timer.stop;
